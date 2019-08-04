@@ -1,0 +1,143 @@
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    background-color: #33001a;
+} 
+header {
+    height: 100%;
+    background-image: url('img/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.70;
+}
+nav {
+    background-color: #6B6273;
+    position: fixed;
+    top: 0px;
+	margin: 0;
+	padding: 0;
+	width:100%;
+}
+nav ul {
+    font-size: 20px;
+	margin: 0;
+	padding: 0;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+nav ul li {
+    color: aliceblue;
+	padding: 5px;
+	font-size: 20px;
+}
+nav ul li:hover {
+    background-color: aliceblue;
+    text-decoration: none;
+	color: black;
+}  
+.branding {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 1000;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    letter-spacing: 8px;
+    font-family: 'Signika', sans-serif;
+}
+.display-middle {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+}
+#section1 {
+    font-size: 1.3rem;
+}
+.word-space {
+    letter-spacing: 0.5em;
+}
+.bg-muted {
+    background-color: #a7aeba;
+    color: white;
+}
+.txt-name , .txt-email , .txt-massage {
+    width: 90%;
+    height: 40px;
+}
+.txt-massage {
+    height: 100px;
+}
+footer {
+    background-color: rgb(25, 23, 27);
+    /*opacity: 0.60;*/
+    /*background-image: url('img/footer1.jpg');*/
+    color: #9fa8b7;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+footer a {
+    /*color: black;*/
+	color: #fff;
+}
+.links {
+    font-size: 35px;
+    margin-top: 10px;
+}
+footer a:hover {
+    color: #060424;
+}
+.row .card {
+    margin-bottom: 20px;
+}
+.font-20 {
+    font-size: 1.3rem;
+}
+.card:hover {
+    background-color: #ff4d4d;
+    color: white;
+    box-shadow: 5px 5px 10px white;
+}
+.text-shadow {
+    text-shadow: 0 0 3px rgb(238, 233, 233), 0 0 5px rgb(135, 135, 156);
+}
+/*h1 {
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+ }*/
+ /*
+ h1 {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  }
+*/
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+    .block2 {
+        margin-top: 50px;
+    }
+    .block1 {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 767px) {
+    #section1 {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap Style CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Chivo|Domine|Ledger|Nixie+One|Open+Sans|Overpass|Signika" rel="stylesheet">
+    <!--Project Style Sheet-->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Porfolio</title>
+    
+    <script src="./main.js"></script>
+    
+    <style>
+        .container , .card {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header id="home">
+        
+    </header>
+	<nav style="z-index: 5;">
+		<ul>
+			<a href="#home"><li><i class="fas fa-home"></i> Home</li></a>
+			<a href="#about" class="ml-2"><li><i class="fas fa-user-secret"></i> About</li></a>
+			<a href="#project" class="ml-2"><li><i class="fas fa-code-branch"></i> Project</li></a>
+			<a href="#contact" class="ml-2"><li><i class="fas fa-phone"></i> Contact</li></a>
+		</ul>
+	</nav>
+	<div class="display-middle">
+        <div class="branding"><p>MY PORTFOLIO</p></div>
+    </div>
+
+    <section id="section1" class="bg-dark text-light pt-5 pb-5">
+        <div class="container">
+           <div id="about" class="text-center">
+                <h1 class="text-info">About me</h1>
+            </div>
+
+            <div>
+                <p class="text-center text-warning font-weight-bold"><em>I love Programming</em></p>
+                <p>
+                    I completed my graduation in 2018 at 'Agasti College Akole'. After graduation i am join to java courese like Spring, Hibernate, Web Services at 'Sathya Technologies Hyderabad'.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <p>
+                        <b><i class="fa fa-user"></i> Jayest Tajane</b>
+                        <!--<em>Jayest Tajane</em>-->
+                    </p>
+                    <img src="img/my-img.jpg" class="img-fluid img-thumbnail" alt="Photo of Me" width="500" height="333">
+                </div>
+
+                <!-- Hide this text on small devices -->
+                <div class="col-md-6">
+                    <p class="containt">Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="percent-bars">
+                <h3 class="sub-heading text-center text-success">Im really good at:</h3>
+
+                <span class="word-space font-weight-bold"><i class="fa fa-laptop"></i> JAVA</span>
+                <div class="bg-muted mb-3">
+                    <div class="bg-secondary pl-3" style="width:80%;">80%</div>
+                </div>
+
+                <span class="word-space font-weight-bold"><i class="fa fa-laptop"></i> PYTHON</span>
+                <div class="bg-muted mb-3">
+                    <div class="bg-secondary pl-3" style="width:70%;">70%</div>
+                </div>
+
+                <span class="word-space font-weight-bold"><i class="fa fa-camera"></i> WEB DESIGN</span>
+                <div class="bg-muted mb-3">
+                    <div class="bg-secondary pl-3" style="width:60%;">60%</div>
+                </div>
+
+                <span class="word-space font-weight-bold"><i class="far fa-image"></i> PHOTOSHOP</span>
+                <div class="bg-muted">
+                    <div class="bg-secondary pl-3" style="width:40%;">40%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="bg-dark text-light mt-2 pt-5 pb-5">
+        <div class="text-center">
+            <h1 class="text-info">My Projects</h1>
+        </div>
+        <p class="text-center text-success font-weight-bold font-20"><em>This is my Passion</em></p>
+
+        <div class="project-dis">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-warning text-dark">
+                            <div class="card-body">
+                                <h5 class="card-title">Java-DB framework</h5>
+                                <p class="card-text">The Java-DB framework provides a lot of functionality to developers for connecting java app to database.</p>
+                                <a href="https://github.com/jayu-t/java-db-framework" class="btn btn-secondary" >View Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-warning text-dark">
+                            <div class="card-body">
+                                <h5 class="card-title">Salary Manager</h5>
+                                <p class="card-text">This is simple app for managing employee salary. This app is helpful for medium scale companies.</p>
+                                <a href="https://github.com/jayu-t/employee-salary-manager" class="btn btn-secondary" >View Source</a>
+                                <a href="./project/construction/index.php" class="btn btn-secondary" >Launch</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-warning text-dark">
+                            <div class="card-body">
+                                <h5 class="card-title">The CSS Framework</h5>
+                                <p class="card-text">The Great CSS is a framework for web devlopers or designers to design a website or webapp.</p>
+                                <a href="cooming-soon.html" class="btn btn-secondary" >View Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-warning text-dark pt-5 pb-5 mt-2">
+        <div class="text-center mb-4">
+            <h1 class="text-dark">Contact Me</h1>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-md-5 text-center block1 text-shadow">
+                    <div class="text-center">
+                        <h3 class="">WHERE I LIVE</h3>
+                        <p><em>My contact information given below!</em></p>
+                    </div>
+                    <div>
+                        <div>
+                            <h5><i class="fa fa-map-marker"></i> Maharastra, India<br></h5>
+                            <h5><b><i class="fa fa-phone"></i> Phone: +91 9172959534<br></b></h5>
+                            <h5><b><i class="fa fa-envelope"></i> Email: jayeshtajane@gmail.com<br></b></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 text-center block2">
+                    <div class="text-center">
+                        <h3 class="">GIVE FEEDBACK</h3>
+                        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+                    </div>
+                    <div>
+                        <form action="/action_page.php" target="_blank">
+                            <div>
+                                <div>
+                                    <input type="text" placeholder="Name" required name="Name" class="txt-name">
+                                </div>
+                                <div class="mt-2">
+                                    <input type="text" placeholder="Email" required name="Email" class="txt-email">
+                                </div>
+                                <div class="mt-2">
+                                    <textarea name="massagw" id="massage" class="txt-massage" placeholder="Massage"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-center mt-2">
+        <a href="#home" class="btn btn-secondary"><i class="fa fa-arrow-up"></i> To the top</a><br>
+        <div class="mt-3 h4">Follow me On</div>
+        <div class="links">
+            <a href="https://www.facebook.com/jayesh.tajane.5" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/__jayesh__tajane__/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-snapchat" target="_blank"></i></a>
+            <a href="https://pinterest.com/jaytajane/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://twitter.com/jayesh_tajane" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/jayesh-tajane-79b11b139/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Created by <a href="#about">Jayesh</a></p>
+    </footer>
+</body>
+</html>
