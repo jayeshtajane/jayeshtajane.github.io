@@ -59,7 +59,7 @@ nav ul a:hover {
     transform:translate(-50%,-50%);
     -ms-transform:translate(-50%,-50%);
 }
-#section1 {
+.section1 {
     font-size: 1.3rem;
 }
 .word-space {
@@ -119,4 +119,29 @@ footer a:hover {
     #section1 {
         font-size: 1.1rem;
     }
+}
+
+.color-1 {
+    background-color: rgb(255, 251, 250);
+}
+
+.color-2 {
+    background-color: rgb(235, 226, 225);
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+@media (max-width: 500px) {
+    .sm-hide {
+        display: none;
+    }
+}
+
+.text-yellow {
+    color: yellow;
+    font-weight: 600;
 }

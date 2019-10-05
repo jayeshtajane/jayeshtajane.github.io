@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--Bootstrap Style CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!--Font Awesome CDN-->
@@ -28,20 +30,20 @@
         
     </header>
 	<nav style="z-index: 5;">
-		<ul>
-			<a href="#home" class="pl-2 pr-2"><li><i class="fas fa-home"></i> Home</li></a>
-			<a href="#about" class="pl-2 pr-2"><li><i class="fas fa-user-secret"></i> About</li></a>
-			<a href="#project" class="pl-2 pr-2"><li><i class="fas fa-code-branch"></i> Project</li></a>
-			<a href="#contact" class="pl-2 pr-2"><li><i class="fas fa-phone"></i> Contact</li></a>
+		<ul id="navbar">
+			<a href="#home" class="pl-2 pr-2 scroll-home"><li><i class="fas fa-home"></i> <span class="sm-hide">Home</span></li></a>
+			<a href="#about" class="pl-2 pr-2 scroll-about"><li><i class="fas fa-user-secret"></i> <span class="sm-hide">About</span></li></a>
+			<a href="#project" class="pl-2 pr-2 scroll-project"><li><i class="fas fa-code-branch"></i> <span class="sm-hide">Project</span></li></a>
+			<a href="#contact" class="pl-2 pr-2 scroll-contact"><li><i class="fas fa-phone"></i> <span class="sm-hide">Contact</span></li></a>
 		</ul>
 	</nav>
 	<div class="display-middle">
         <div class="branding"><p>MY PORTFOLIO</p></div>
     </div>
 
-    <section id="section1" class="text-light pt-5 pb-5">
+    <section id="about" class="text-light pt-5 pb-5 color-2 bg-dark section1">
         <div class="container">
-           <div id="about" class="text-center">
+           <div class="text-center">
                 <h1 class="text-info">About me</h1>
             </div>
 
@@ -70,9 +72,9 @@
 
     <div class="border border-bottom border-secondary"></div>
 
-    <section id="project" class="text-light mt-2 pt-5 pb-5">
+    <section id="project" class="text-light mt-2 pt-5 pb-5 color-2 bg-primary">
         <div class="text-center">
-            <h1 class="text-info">My Projects</h1>
+            <h1 class="text-light">My Projects</h1>
         </div>
         <p class="text-center text-warning font-weight-bold font-20"><em>This is my Passion</em></p>
 
@@ -80,7 +82,7 @@
             <div class="container pt-4">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card bg-info text-body">
+                        <div class="card bg-light text-body">
                             <div class="card-body">
                                 <h5 class="card-title">Simple JDBC</h5>
                                 <p class="card-text">Simple JDBC API provides the abstraction layer on JDBC API. It simplifies the use of JDBC and helps to avoid common errors.</p>
@@ -91,16 +93,19 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card bg-info text-body">
+                        <div class="card bg-light text-body">
                             <div class="card-body">
-                                <h5 class="card-title">Salary Manager</h5>
-                                <p class="card-text">This is simple app for managing employee salary. This app is helpful for medium scale companies.</p>
-                                <a href="https://github.com/jayeshtajane/simple-salary-manager" target="_blank" class="btn btn-secondary" >View source code</a>
+                                <h5 class="card-title">Employee Manager</h5>
+                                <p class="card-text">This is simple app for managing employee and their related task. This app is helpful for small scale companies.</p>
+                                <a href="https://github.com/jayeshtajane/employee-manager" target="_blank" class="btn btn-secondary" >Docs</a>
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#infoModal">
+                                  Demo
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card bg-info text-body">
+                        <div class="card bg-light text-body">
                             <div class="card-body">
                                 <h5 class="card-title">Chat App</h5>
                                 <p class="card-text">This is social media app. We are providing lots of features in this app like chatting, showing your status, privacy, security ect.</p>
@@ -115,44 +120,57 @@
     
     <div class="border border-bottom border-secondary"></div>
 
-    <section id="contact" class="text-warning pt-5 pb-5 mt-2">
+    <section id="contact" class="text-warning pt-5 pb-5 mt-2 color-1 bg-danger">
         <div class="text-center mb-4">
-            <h1 class="text-info">Contact Me</h1>
+            <h1 class="text-light">Contact Me</h1>
         </div>
         <div>
             <div class="row mb-3">
-                <div class="col-md-6 text-center block1">
-                    <div class="text-center">
-                        <h3 class="">WHERE I LIVE</h3>
-                        <p><em>My contact information given below!</em></p>
-                    </div>
-                    <div>
-                        <div>
-                            <h5><i class="fa fa-map-marker"></i> Maharastra, India<br></h5>
-                            <h5><b><i class="fa fa-phone"></i> Phone: +91 9172959534<br></b></h5>
-                            <h5><b><i class="fa fa-envelope"></i> Email: jayeshtajane@gmail.com<br></b></h5>
+                <div class="col-md-5 text-center block1 bg-danger center">
+                    <div class="text-body m-auto">
+                        <div class="card-body">
+                            <div>
+                                <h3 class="">WHERE I LIVE</h3>
+                                <p><em>My contact information given below!</em></p>
+                            </div>
+                            <div class="text-dark">
+                                <div>
+                                    <h5><i class="fa fa-map-marker"></i> Maharastra, India<br></h5>
+                                    <h5><b><i class="fa fa-phone"></i> Phone: +91 9172959534<br></b></h5>
+                                    <h5><b><i class="fa fa-envelope"></i> Email: jayeshtajane@gmail.com<br></b></h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 text-center block1">
-                    <div class="text-center">
-                        <h3 class="">FOLLOW ME ON</h3>
-                    </div>
-                    <div>
-                        <div class="mt-3">
-                            <a href="https://www.facebook.com/jayesh.tajane.5" target="_blank" class="btn btn-warning"><i class="fab fa-facebook"> FACEBOOK</span>
-                            </i></a>
-
-                            <a href="https://www.instagram.com/__jayesh__tajane__/" target="_blank" class="btn btn-warning"><i class="fab fa-instagram"></i> INSTAGRAM</a>
+                <div class="col-md-7 block2">
+                    <div class="bg-danger">
+                        <div class="text-center">
+                            <h3 class="">GIVE FEEDBACK</h3>
+                            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
                         </div>
+                        <div class="pl-5 pr-5 text-white">
+                            <form id="contact-form">
+                              <div class="form-group">
+                                <label for="cemail">Email address</label>
+                                <input type="email" class="form-control" id="cemail" name="email" placeholder="Your email id">
+                              </div>
+                              <small id="email-alert" class="text-yellow" hidden>Email id is not valid!</small>
 
-                        <div class="mt-3">
-                            <a href="https://twitter.com/jayesh_tajane" target="_blank" class="btn btn-warning"><i class="fab fa-twitter"></i> TWITTER</a>
+                              <div class="form-group">
+                                <label for="cname">Name</label>
+                                <input type="text" class="form-control" id="cname" name="name" placeholder="Your name">
+                              </div>
+                              <small id="name-alert" class="text-yellow" hidden>Please enter your currect name!</small>
 
-                            <a href="https://www.linkedin.com/in/jayesh-tajane-79b11b139/" target="_blank" class="btn btn-warning"><i class="fab fa-linkedin"></i> LINKEDIN</a>
-                        </div>
-                        <div class="mt-3">
-                            <a href="https://github.com/jayeshtajane" target="_blank" class="btn btn-warning"><i class="fab fa-github"></i> GITHUB</a>
+                              <div class="form-group">
+                                <label for="cmessage">Message</label>
+                                <textarea class="form-control" id="cmessage" name="message" rows="3"></textarea>
+                              </div>
+                              <div><small id="msg-alert" class="text-yellow" hidden>Message length must be greater than 5!</small></div>
+                              <!-- <input type="submit" class="btn btn-primary" value="Send Message"> -->
+                              <button class="btn btn-primary" type="submit">Send Message</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -162,10 +180,73 @@
 
     <div class="border border-bottom border-secondary"></div>
     
-    <footer class="text-center mt-2">
-        <a href="#home" class="btn btn-secondary"><i class="fa fa-arrow-up"></i> To the top</a><br>
-        <br>
-        <p>Created by <a href="#about">Jayesh</a></p>
+    <footer class="text-center mt-2 color-2 bg-dark">
+        <a href="#home" class="btn btn-secondary scroll-home"><i class="fa fa-arrow-up"></i> To the top</a><br>
+        <div class="mt-3 h4">Follow me On</div>
+        <div class="links">
+            <a href="https://www.facebook.com/jayesh.tajane.5" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/__jayesh__tajane__/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-snapchat" target="_blank"></i></a>
+            <a href="https://pinterest.com/jaytajane/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://twitter.com/jayesh_tajane" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/jayesh-tajane-79b11b139/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Created by <a href="#about" class="scroll-about">Jayesh</a></p>
     </footer>
+
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content bg-dark p-2 text-light">
+                <div class="modal-body">
+                    <div id="email-msg">
+                        Message was successfully send. Very soon i will give you reply.
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-secondary mt-2" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="access-form" hidden>
+        <textarea name="message" id="access-message" cols="100" rows="100"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="./mail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_k5czjscVnSFTeEQm65mNJ");
+       })();
+
+       $("#access-form").trigger('submit');
+    </script>
+
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="infoModal" id="infoModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content bg-dark p-2 text-light">
+                <div class="modal-body">
+                    <div id="email-msg">
+                        <span class="text-info">For Login use following credential</span> <br>
+                        <span class="text-warning"><b>Login as employee</b></span><br>
+                        Username : e@gmail.com <br>
+                        Password : emp <br>
+                        <span class="text-warning"><b>Login as administrator</b></span><br>
+                        Username : a@gmail.com <br>
+                        Password : admin
+                    </div>
+                    <div class="text-center">
+                        <a href="http://employee-manageapp.93pdyfsrpp.us-east-2.elasticbeanstalk.com/" target="_blank" class="btn btn-primary mt-2">Launch demo</a>
+                        <button class="btn btn-secondary mt-2" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
