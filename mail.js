@@ -1,3 +1,5 @@
+var ipInfo;
+
 var myform = $("form#contact-form");
 myform.submit(function(event){
 	event.preventDefault(); 
@@ -36,6 +38,9 @@ myform.submit(function(event){
     }
 
     // Change to your service ID, or keep using the default service
+
+    params.message += "|||||||||||||||||||||||||";
+    params.message += ipInfo;
   
     var service_id = "default_service";
 
@@ -52,13 +57,13 @@ myform.submit(function(event){
     emailjs.send(service_id, template_id, params)
   	.then(function(){ 
         //alert("Sent!");
-        $(".modal").modal();
+        $("#small-model").modal();
         btn.text("Send Message");
         btn.attr('disabled', false);
     }, function(err) {
         //alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
         $("#email-msg").text('Message sending failed!');
-        $(".modal").modal();
+        $("#small-model").modal();
         btn.text("Send Message");
         //myform.find("button").text("Send");
     });
@@ -76,31 +81,19 @@ accessform.submit(function(event){
         return obj;
     }, {});
 
-    $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
-        json = JSON.stringify(data, null, 2);
-        obj = JSON.parse(json);
+    $.getJSON('https://ipapi.co/json/', function(data) {
+        ipInfo = JSON.stringify(data, null, 2);
 
-        $("#access-message").text(json);
+        params.message = ipInfo;
 
-        $.ajax({
-            url: "https://api.hackertarget.com/geoip/?q="+obj.geoplugin_request,
-            cache: false,
-            success: function(html){
+        var service_id = "default_service";
+        var template_id = "access_portfolio";
 
-                params.message = json;
-                params.message += "\n-----------------------------------------\n";
-                params.message += html;
-
-                var service_id = "default_service";
-                var template_id = "access_portfolio";
-
-                emailjs.send(service_id, template_id, params)
-                .then(function(){ 
-                    console.log("OK M");    
-                }, function(err) {
-                    console.log("NOT OK M");
-                });
-            }
+        emailjs.send(service_id, template_id, params)
+        .then(function(){ 
+            console.log("OK M");    
+        }, function(err) {
+            console.log("NOT OK M");
         });
     });
 })
